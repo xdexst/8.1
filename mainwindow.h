@@ -19,6 +19,7 @@ public:
 private slots:
     void onStartButtonClicked();
     void onStopButtonClicked();
+    void onPauseButtonClicked();
 
 private:
     Ui::MainWindow *ui;
