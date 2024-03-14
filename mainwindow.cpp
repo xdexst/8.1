@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Подключаем сигнал clicked() кнопки pushButton к слоту onStartButtonClicked()
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
+    connect(ui->stopButton, &QPushButton::clicked, this, &MainWindow::onStopButtonClicked);
 }
 
 MainWindow::~MainWindow()
@@ -20,4 +21,8 @@ void MainWindow::onStartButtonClicked()
 {
     qDebug() << "Start button clicked";
     QMessageBox::information(this, "information", "Старт программы!");
+}
+void MainWindow::onStopButtonClicked()
+{
+    QMessageBox::information(this, "information", "Программа прекращена!");
 }
